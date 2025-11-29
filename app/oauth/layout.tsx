@@ -1,7 +1,7 @@
 import ProtectedPublicRoute from "@/providers/ProtectedPublicRoute";
 import React from "react";
 
-const layout = React.memo(({ children }: {
+const layout = ({ children }: {
     children: React.ReactElement
 }): React.ReactElement => {
 
@@ -10,6 +10,6 @@ const layout = React.memo(({ children }: {
             {children}
         </ProtectedPublicRoute>
     )
-});
+};
 
 export default layout;

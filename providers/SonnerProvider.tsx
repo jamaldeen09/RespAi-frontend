@@ -18,7 +18,7 @@ export const callToast = (
 
 
 // ** Provides the next js app with a toaster that makes it possible to see the toast after being called ** \\
-export const SonnerProvider = React.memo(({ children }: {
+export const SonnerProvider = ({ children }: {
     children: React.ReactNode
 }): React.ReactElement => {
     return (
@@ -32,5 +32,5 @@ export const SonnerProvider = React.memo(({ children }: {
             {children}
         </>
     );
-});
+};
 

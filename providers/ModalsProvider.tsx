@@ -11,7 +11,7 @@ import useResizer from "@/hooks/useResizer";
 import React from "react";
 
 // ** Provider to render all fixed modals used in the app ** \\
-const ModalsProvider = React.memo(({ children }: {
+const ModalsProvider = ({ children }: {
     children: React.ReactNode
 }): React.ReactElement => {
     const { getTrigger, mutateTrigger } = useRedux();
@@ -99,6 +99,6 @@ const ModalsProvider = React.memo(({ children }: {
             </Modal>
         </>
     );
-});
+};
 
 export default ModalsProvider;

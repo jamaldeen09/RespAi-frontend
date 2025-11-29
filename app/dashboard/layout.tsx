@@ -3,7 +3,7 @@ import ProfileProvider from "@/providers/ProfileProvider";
 import ProtectedRoute from "@/providers/ProtectedRoute";
 import React from "react";
 
-const layout = React.memo(({ children }: {
+const layout = ({ children }: {
     children: React.ReactElement
 }): React.ReactElement => {
 
@@ -17,6 +17,6 @@ const layout = React.memo(({ children }: {
             </ProfileProvider>
         </ProtectedRoute>
     )
-});
+};
 
 export default layout;

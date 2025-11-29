@@ -7,7 +7,7 @@ import React from "react";
 import { callToast } from "./SonnerProvider";
 import Loading from "@/components/reusable/Loading";
 
-const ProfileProvider = React.memo(({ children }: {
+const ProfileProvider = ({ children }: {
     children: React.ReactNode
 }): React.ReactElement => {
     const { dispatch } = useRedux();
@@ -58,6 +58,6 @@ const ProfileProvider = React.memo(({ children }: {
         return <Loading />
 
     return <>{children}</>
-});
+};
 
 export default ProfileProvider;

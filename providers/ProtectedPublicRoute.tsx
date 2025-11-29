@@ -5,7 +5,7 @@ import { useNavigationHook } from "@/hooks/useNavigationHook";
 import { useGetAuthStateQuery } from "@/redux/apis/authApi";
 import React from "react";
 
-const ProtectedPublicRoute = React.memo(({ children }: {
+const ProtectedPublicRoute = ({ children }: {
   children: React.ReactNode
 }): React.ReactElement => {
   const { router, pathname } = useNavigationHook();
@@ -49,6 +49,6 @@ const ProtectedPublicRoute = React.memo(({ children }: {
 
   // ** Finished checking AND the user IS NOT authenticated ** \\
   return <>{children}</>;
-});
+};
 
 export default ProtectedPublicRoute;
