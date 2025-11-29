@@ -4,7 +4,7 @@ import ProtectedRoute from "@/providers/ProtectedRoute";
 import React from "react";
 
 const layout = ({ children }: {
-    children: React.ReactElement
+    children: React.ReactNode
 }): React.ReactElement => {
 
     return (
