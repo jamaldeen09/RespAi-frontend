@@ -13,7 +13,7 @@ const GoogleAuth = ({ disabled }: {
         setIsLoading(true);
         try {
             // ** Redirect to Google OAuth ** \\
-            window.location.href = process.env.NEXT_PUBLIC_GOOGLE_AUTH_LINK || "";
+            window.location.href = process.env.NEXT_PUBLIC_GOOGLE_LINK || "/";
         } catch (error) {
             console.error('Google OAuth redirect failed:', error);
             callToast("error", "Authentication with google failed, please try again shortly")
