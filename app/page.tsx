@@ -3,7 +3,7 @@ import React from "react";
 
 const page = (): React.ReactElement => {
   return (
-      <LandingPage/>
+    <LandingPage />
   );
 };
 

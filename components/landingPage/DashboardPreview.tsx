@@ -5,7 +5,7 @@ export const DashboardPreview = () => {
         <div className="relative rounded-xl overflow-hidden shadow-lg">
 
           <video
-            src="/videos/dashboard-demo.mov"
+            src="/videos/dashboard-demo.mp4"
             autoPlay
             loop
             muted
