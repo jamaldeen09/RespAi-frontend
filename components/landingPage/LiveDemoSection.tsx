@@ -152,7 +152,7 @@ const DemoItem = ({ scenario, before, after, analysis, isOpen, onToggle }: DemoI
                                             {before}
                                         </pre>
                                     </div>
-                                    <div className="space-y-2 border-4 border-red-600">
+                                    <div className="space-y-2">
                                         <div className="flex items-center gap-2 text-sm font-medium text-primary">
                                             <Check className="w-4 h-4" />
                                             With Resp AI
