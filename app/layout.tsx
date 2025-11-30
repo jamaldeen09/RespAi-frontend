@@ -6,6 +6,8 @@ import ReduxProvider from '@/providers/ReduxProvider';
 import ModalsProvider from '@/providers/ModalsProvider';
 import { SonnerProvider } from '@/providers/SonnerProvider';
 import ContextsProvider from '@/providers/ContextsProvider';
+import { Suspense } from 'react';
+import Loading from '@/components/reusable/Loading';
 
 // ** Global font being used ** \\
 const poppins: NextFont = Poppins({
@@ -37,15 +39,17 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={poppins.className}>
-        <ReduxProvider>
-          <SonnerProvider>
-            <ContextsProvider>
-              <ModalsProvider>
-                {children}
-              </ModalsProvider>
-            </ContextsProvider>
-          </SonnerProvider>
-        </ReduxProvider>
+        <Suspense fallback={<Loading />}>
+          <ReduxProvider>
+            <SonnerProvider>
+              <ContextsProvider>
+                <ModalsProvider>
+                  {children}
+                </ModalsProvider>
+              </ContextsProvider>
+            </SonnerProvider>
+          </ReduxProvider>
+        </Suspense>
       </body>
     </html>
   );
