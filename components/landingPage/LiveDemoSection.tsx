@@ -139,7 +139,7 @@ const DemoItem = ({ scenario, before, after, analysis, isOpen, onToggle }: DemoI
                         }}
                         className="overflow-hidden"
                     >
-                        <div className="px-5 pb-[18px] pt-2">
+                        <div className="px-5 pb-[18px] pt-2 overflow-x-auto element-scrollable-hidden-scrollbar overflow-y-hidden">
                             <div className="space-y-4">
                                 {/* Before & After Comparison */}
                                 <div className="grid md:grid-cols-2 gap-4">
@@ -152,7 +152,7 @@ const DemoItem = ({ scenario, before, after, analysis, isOpen, onToggle }: DemoI
                                             {before}
                                         </pre>
                                     </div>
-                                    <div className="space-y-2">
+                                    <div className="space-y-2 border-4 border-red-600">
                                         <div className="flex items-center gap-2 text-sm font-medium text-primary">
                                             <Check className="w-4 h-4" />
                                             With Resp AI
