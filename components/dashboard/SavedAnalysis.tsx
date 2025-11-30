@@ -146,8 +146,6 @@ const SavedAnalysis: React.FC = () => {
         { isLoading, isError, error, data, isSuccess, isFetching }
     ] = useLazyGetSingleAnalysisDetailsQuery();
 
-    useEffect(() => console.log("ANALYSIS: ", analysis), [analysis])
-
     // ** UseEffect to trigger fetch for single analysis if singleAnalysisId change ** \\
     useEffect(() => {
         let isComponentMounted = true;
