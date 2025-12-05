@@ -86,7 +86,7 @@ const Login = (): React.ReactElement => {
 
     // ** Custom hook to aid in login. and custom function to extract any validation errors ** \\
     const { error, createEffect, isLoading } = useLogin();
-    const { extractValidationErrors, authState } = useAuth();
+    const { extractValidationErrors } = useAuth();
     const validationErrors = extractValidationErrors(error);
     return (
         <Form {...loginForm}>
